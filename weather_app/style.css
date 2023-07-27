@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*
+
+{
+    margin: 0%;
+    padding: 0%;
+    font-family: Roboto,sans-serif;
+}
+
+.container
+{
+    width:100% ;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+    /* yha pr issliye de hai prop kuki agr udhr dete toh opacity container ke amder ke element ki bhi kam ho jati */
+    .container::before 
+{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url(./cool-background.png);
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    opacity: 0.4;
+}
+
+.weather
+{
+    z-index: 1;
+    /* background-color: white; */
+    color: white;
+    display: flex;
+
+}
+
+.weather div{
+    margin: 0.625rem;
+}
+
+.weather1
+{
+    font-size: 4rem;
+}
+
+.weather p
+{
+    font-size: 2rem;
+}
+
+.weather span
+{
+    font-size: 0.75rem;
+}
+
+.weather3 span{
+margin: 0.3rem;
+}
+
+.weather3 img{
+    width: 2rem;
+}
+
+nav{
+    height: 100px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.18);
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    background-color: rgba(180,177,177,0.075);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px 100px 0 0;
+    padding:1rem 0;
+
+}
+
+nav form{
+    width: 70%;
+    /* background-color: white; */
+    grid-template-columns: 5fr 1fr;
+    display: grid;
+
+}
+
+.searchField
+{
+    font-size: 1.1rem;
+    outline: none;
+    color: white;
+    background-color: transparent;
+    border: none;
+    padding: 1rem 0;
+    border-bottom: 2px white solid;
+    width: 98%;
+}
+
+nav form button
+{
+    background-color: rgba(219, 222, 225, 0.436);
+    border-radius: 0 25px 25px 0;
+    color: rgba(255, 255, 255, 0.466);
+
+}
+
+@media only screen and (max-width:600px) {
+   .container
+   {
+    flex-wrap: wrap;
+   }
+}
